@@ -54,19 +54,44 @@ body {
     z-index: 1;
 }
 .face::before {
-    text-align: center;
+    /* text-align: center; */
     content: '!';
     position: absolute;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) !important;
     color: rgb(152, 73, 73);
     font-size: 100px;
     font-weight: bold;
-    line-height: 150%;
 }
+@media  (max-width: 500px) {
+    .container {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .game-block {
+        width: 80%;
+        margin: 10px auto;
+        gap: 5px;
+    }
+    .pic-block{
+        width: 50px;
+    }
+    .pic-block img {
+        width: 50px;
+        height: 50px;
+    }
+    .face {
+        width: 50px;
+        height: 50px;
+    }
+    .face::before {
+        font-size: 30px;
+    }
+}
+
 
 .pic-block.is-flipped, .pic-block.is-matched {
     transform: rotateY(180deg);
